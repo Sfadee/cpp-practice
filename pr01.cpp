@@ -1,4 +1,3 @@
-﻿// var_4.cpp : 
 #include <iostream>
 #include <windows.h>
 #include <string>
@@ -62,11 +61,11 @@ void Draw(struct Record* records) {
 	cout.fill(' '); cout.width(78);  cout << left << "|Офисные пакеты"; cout << "|" << endl;
 	cout.width(79); cout.fill('-'); cout << "-" << endl;
 	cout.fill(' ');
-	cout << left << "| Наименование ";
-	cout << left << "| Производитель";
-	cout << left << "| Количество сост. частей";
-	cout << left << "| Цена($)";
-	cout << left << " | Дата релиза";
+	cout << left << "|      Фирма     ";
+	cout << left << "| Количество продуктов ";
+	cout << left << "| Объем продажи  ($)  ";
+	cout << left << "| Часть ранка (%)";
+	cout << left << " | Дата основания";
 	cout << "|" << endl;
 	cout.width(79); cout.fill('-'); cout << "-" << endl;
 	cout.fill(' ');
@@ -82,7 +81,7 @@ void Draw(struct Record* records) {
 		cout << "|" << endl;
 	}
 	cout.width(79); cout.fill('-'); cout << "-" << endl;
-	cout.fill(' '); cout.width(78);  cout << left << "|Примечание: возможно бесплатно получить продукт StarOffice через Internet "; cout << "|" << endl;
+	cout.fill(' '); cout.width(78);  cout << left << "|Примечание: по данным GartnerGroup за 1999г"; cout << "|" << endl;
 	cout.width(79); cout.fill('-'); cout << "-" << endl;
 }
 
@@ -93,9 +92,8 @@ int main()
 
 	struct Record Table[10];
 
-	Table[0] = { "Office", "Microsoft", 4, 870.99, {11,01,2011} };
-	Table[1] = { "SmartSute", "Lotus", 5, 1020.99, {21,10,2012} };
-	Table[2] = { "StarOffice", "Sun", 4, 9.99, {21,10,2020} };
-	Table[3] = { "Max", "", 9, 9999.99, {31,12,2023} };
+	Table[0] = { "Oracle","+ 1",2488000000,"31.1" , {01,02,2010} };
+	Table[1] = { "IBM","+ 3",2392000000,"29.9" , {02,03,2020} };
+	Table[2] = { "Microsoft","+ 2",1048000000,"13.1", {12,12,2012} };
 	Draw(Table);
 }
